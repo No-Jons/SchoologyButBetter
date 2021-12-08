@@ -23,13 +23,13 @@
   "content_scripts" : [
     {
       "css": ["css/all-pages.css"],
-      "js" : ["lib/js/jquery.min.js", "js/load_user_data.js", "js/css.js", "js/logger.js", "lib/js/confetti.js"],
+      "js" : ["lib/js/jquery.min.js", "js/load_user_data.js", "js/css.js", "js/logger.js", "lib/js/confetti.js", "js/api.js"],
       "matches" : ["*://*.schoology.com/*"],
       "run_at" : "document_start"
     },
     {
       "css" : ["css/tooltip.css", "css/notes.css"],
-      "js" : ["js/all-pages.js", "js/api.js", "js/calendar.js", "js/notes.js"],
+      "js" : ["js/all-pages.js", "js/calendar.js", "js/notes.js"],
       "matches" : ["*://*.schoology.com/*"],
       "run_at" : "document_end"
     },

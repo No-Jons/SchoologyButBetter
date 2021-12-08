@@ -1,5 +1,3 @@
-let sgySite = "https://sgy.no-jons.xyz/";
-
 function getAuthHeaders(){
     return `OAuth realm="Schoology%20API",oauth_consumer_key="${config.key}",oauth_signature_method="PLAINTEXT",oauth_timestamp="${Math.floor(Date.now() / 1000)}",oauth_nonce="${Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)}",oauth_version="1.0",oauth_signature="${config.secret}%26"`
 }
@@ -48,16 +46,4 @@ async function fetchApiData(path){
                 resolve(response)
             });
     });
-}
-
-
-// todo: maybe remove this?
-async function fetchSiteInfo(link){
-    let responseJson;
-    Logger.log(`Getting summary for site ${link}`);
-    let response = fetch(sgySite + `site_info?site=${link}`);
-    await response.then(function(value) {
-        responseJson = value.json();
-    });
-    return responseJson;
 }

@@ -1,9 +1,3 @@
-//import {
-//    Logger
-//} from "./logger.js";
-
-// let logger = {log: console.log.bind(window.console, `%c+`, `color:orange;border:1px solid #2A2A2A;border-radius:100%;font-size:14px;font-weight:bold;padding: 0 4px 0 4px;background-color:#2A2A2A`)}
-
 function error() { console.log("Last error:", chrome.runtime.lastError); }
 
 chrome.runtime.onMessage.addListener(

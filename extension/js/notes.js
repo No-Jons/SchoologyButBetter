@@ -1,15 +1,3 @@
-// notes data structure
-// {
-//      content: "...",
-//      id: "...",
-//      color: "#FFFFFF",
-//      display: false,
-//      pos: {
-//          x: 0,
-//          y: 0
-//      }
-// }
-
 let notes;
 let notesPopupActive = false;
 let mouseDrag = false;

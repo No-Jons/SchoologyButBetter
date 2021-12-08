@@ -17,6 +17,10 @@
 
 .sgy-materials-filter-list * { color: var(--background_contrast)!important; }
 
+.sgy-materials-filter-list .sgy-materials-filter-submit, .sgy-materials-filter-list .sgy-materials-filter-all {
+    color: var(--text)!important;
+}
+
 .sgy-materials-filter-list input { border: 1px solid var(--border)!important; }
 
 .sgy-materials-filter-list .type-filters,

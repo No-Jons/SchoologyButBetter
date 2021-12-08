@@ -1,5 +1,3 @@
-let defaultDomain = window.location.host;
-
 let userID = getUserID();
 let schoolID;
 

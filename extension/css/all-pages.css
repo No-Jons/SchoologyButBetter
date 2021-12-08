@@ -189,6 +189,8 @@ input[type=date], input[type=number], input[type=text],
 
 .typography-button-secondary-dark-button-2438965213 { background-color: #D4F3FF!important; }
 
+#sgy-action:hover { cursor: pointer; }
+
 /* ====================================== */
 /*            Advanced Theme              */
 /* ====================================== */

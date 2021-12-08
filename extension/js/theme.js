@@ -20,7 +20,8 @@ const themes = {
             "border": "#dddddd",
             "link": "#4479b3",
             "text": "#ffffff",
-            "background_contrast": "#000000"
+            "background_contrast": "#000000",
+            "box_shadow": "#000000"
         },
         "animate" : {
             "animate": false
@@ -34,7 +35,8 @@ const themes = {
             "hover": "#424242",
             "link": "#378ce6",
             "main": "#333333",
-            "text": "#ffffff"
+            "text": "#ffffff",
+            "box_shadow": "#000000"
         },
         "animate" : {
             "animate" : false
@@ -48,7 +50,8 @@ const themes = {
             "hover": "#ffffff",
             "link": "#ffffff",
             "main": "#ffffff",
-            "text": "#ffffff"
+            "text": "#ffffff",
+            "box_shadow": "#000000"
         },
         "animate" : {
             "animate": true,
@@ -64,7 +67,8 @@ const themes = {
             "hover": "#ff5757",
             "link": "#ff0f0f",
             "main": "#ff3838",
-            "text": "#ffffff"
+            "text": "#ffffff",
+            "box_shadow": "#000000"
         },
         "animate" : {
             "animate": false

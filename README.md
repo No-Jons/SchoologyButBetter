@@ -8,33 +8,33 @@ productive and give you a better experience overall.
 ## Features
 ### A To-Do List!
 Easily keep track of assignments you still need to complete:
-![To-Do list](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/todo_list.png)
+![To-Do list](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/todo_list.png)
 
 You can also mark assignments as "priorities", so you don't forget to do them:
-![Priority assignment](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/priority_marking.png)
+![Priority assignment](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/priority_marking.png)
 
 And mark assignments as complete once you finish them!
-![Complete assignment](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/mark_complete.png)
+![Complete assignment](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/mark_complete.png)
 
 ### Custom Themes
 Improving upon schoology's... adequate... default theme:
-![Light theme](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/light_theme.png)
+![Light theme](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/light_theme.png)
 
 ...And adding a dark theme:
-![Dark theme](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/dark_mode.png)
+![Dark theme](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/dark_mode.png)
 
 Plus, you can create your own custom theme under the settings page!
-![Custom theme](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/custom_theme.png)
+![Custom theme](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/custom_theme.gif)
 
 ### UI Improvements
 There's lots!!!
 
 ### Improved Search
 Search with much more precision with the improved filter on the course page
-![Filter](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/filter.png)
+![Filter](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/filter.png)
 
 Sample Search:
-![Filter results](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/filter_results.png)
+![Filter results](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/filter_results.png)
 
 #### Filter Selections
 #### Assignments, Assessments (quizzes/tests), ..., links:
@@ -52,7 +52,7 @@ Allows you to only search in specified folders when checked.
 
 ### Grade Info
 Displays a tooltip with the assignment's grade info when hovering over its name:
-![Grade tooltip](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/grade_tooltip.png)
+![Grade tooltip](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/grade_tooltip.png)
 
 ### Notifications
 Notifies you when an assignment is due in 1 hour, and when an assignment is due in 10 minutes.
@@ -72,11 +72,11 @@ In the top left corner of the page, click the slider labelled "Developer Mode".
 
 ### Step 3:
 Go to the top right corner and click "Load Unpacked".
-![Steps 1 - 3](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/setup_1.png)
+![Steps 1 - 3](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/setup_1.png)
 
 ### Step 4:
 Select the folder labelled "Extension" that you extracted, then click "Select Folder"
-![Step 4](https://github.com/No-Jons/SchoologyButBetter/tree/main/extension/img/readme/setup_2.png)
+![Step 4](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/setup_2.png)
 
 ### Step 5:
 Open Schoology!

@@ -76,7 +76,7 @@ Go to the top right corner and click "Load Unpacked".
 <br/>![Steps 1 - 3](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/setup_1.png)
 
 ### Step 4:
-Select the folder labelled "Extension" that you extracted, then click "Select Folder"
+Select the folder labelled "Extension" that you extracted, then click "Select Folder".
 <br/>![Step 4](https://github.com/No-Jons/SchoologyButBetter/blob/main/extension/img/readme/setup_2.png)
 
 ### Step 5:

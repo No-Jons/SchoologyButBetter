@@ -1,5 +1,6 @@
 # SchoologyButBetter
  Schoology but I made it better (debatably)
+ <br/>[Installation Guide](https://github.com/No-Jons/SchoologyButBetter#Installation)
 
 ## What is this?
 *SchoologyButBetter* is a Chrome Extension that works to make your workflow more

@@ -1,0 +1,194 @@
+*:focus { outline: none!important; }
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track { background: none; }
+
+::-webkit-scrollbar-thumb { background: #888; }
+
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+._pendo-launcher-badge_, .course-dashboard__accessibility-icon { display: none!important; }
+
+.loading-icon {
+    position: absolute;
+    background: url("/sites/all/themes/schoology_theme/images/ajax-loader.gif") no-repeat;
+    width: 30px;
+    height: 8px;
+}
+
+.green-check {
+    position: relative;
+    background-color: #ffffff; /* #4aff29 */
+    border: 2px solid black;
+    border-radius: 3px;
+    color: #ffffff;
+    width: 14px;
+    height: 14px;
+}
+
+.green-check:before {
+    content: "✓";
+    position: relative;
+    font-weight: bold;
+    left: 2px;
+    top: -1px;
+}
+
+#sgy-close-popup { position: relative; }
+
+.pause-animation-btn {
+    width: 30px;
+    height: 30px;
+    padding: 15px 0;
+}
+
+/* ====================================== */
+/*             Custom Theme               */
+/* ====================================== */
+
+.course-materials-left-menu .materials-dropdown-arrow,
+#edit-course-switcher-select-nid-button, .portfolio-add-submission-hint__trigger, #loader,
+#comment-navigator, .nav-breadcrumb-subContainer-4084051826:before,
+.lrn_possibilityList:before, .assignment-submitting-success-successImage-2223124178 { display: none!important; }
+
+header button, header a:not(.util-width-sixteen-JiX3r),
+.cancel-btn, .link-btn, .s-page-content-full span, .action-links-unfold,
+#center-top, ul.tabs.primary, li[role=tab] a, .delete-button a:hover,
+.edit-profile-picture-hover:hover, .ui-selectmenu, .UELBU, ._3dHTa,
+#site-navigation-footer *:not(footer), .popups-tabs { background: none!important; }
+
+.sgy-card, .uQOmx._2UdSL._2awxe._1EwGW._2v5vf.Ivlky, .album-comments { border: none!important; }
+
+html, body, #body, #body #main, #header div[role=menu], #sgy-profile-wrapper,
+#sgy-ext-wrapper, #overdue-submissions, .upcoming-events-wrapper, .sgy-card,
+.sgy-card-lens, .Card-card-data-17m6S, .Card-card-image-uV6Bu,
+#main-content-wrapper, #center-top, .materials-filter-wrapper, input,
+.link-wrapper .active, .inline-popup-wrapper, .cancel-btn, #edge-filters-menu,
+.feed-comments, .app-link-wrapper a.active, textarea, .content-top-upper,
+.enrollment-view-wrapper, .enrollments-wrapper, #content-wrapper,
+#collection-view-contents *, .sticky-header *,
+.s-media-album-content-container, .album-comments, #library-main,
+#library-wrapper, #library-left-nav tr td:hover, .action-links-unfold,
+.action-links, #library-search-form-container div,
+#fcalendar .fc-widget-content:hover, .popups-body, .submit-buttons,
+.fc-button:not(.fc-state-active), .fcalendar-filter-menu-wrapper,
+.color-codes-box, ul.tabs.primary, .privatemsg-list td,
+.sMessagingProcessed fieldset, li[role=tab] a, .portfolio-list,
+.portfolio-list__add-new, .portfolio-card, .portfolio-loader,
+.portfolio-route-content, .portfolio-view, .portfolio-view__add-new,
+.modal-body, .modal-footer, .thumbnail-picker-form__upload,
+#notif-filter-page-menu, #edit-departments, #home-feed-container,
+.course-materials-left-menu.active-trail-dist-2 a, #upload-btn,
+#attachments fieldset, .tab-nav.active, #profile-form-tab,
+.option:hover, form fieldset, #edit-user-timezone,
+.notification-title, .notification-title:hover, .email-notify,
+.cellphone-container, .ui-selectmenu-menu,
+.privacy-settings-table .disabled, .privacy-settings-table .selected,
+.assessment-delivery-landing-app .full-height,
+.assessment-delivery-landing-app ._3KefH._1Z0RM,
+.assessment-delivery-landing-app main article,
+.page-title.sDiscussion-processed, .grade-title,
+.s-comments-post-form, #comment-placeholder, .discussion-action-bar,
+.comment, #s-js-student-mastery-report-view .empty,
+.ca-assessment-delivery-take-assessment, .popups-tabs, #error-page,
+#popups-loading div, .profile-container-4015500229,
+.profile-header-2536997237, .content-box-container-3232021855,
+.s-js-course-materials-full, .dialogs, .lrn_possibilityList,
+.lrn_btn_drag, .lrn_dropzone, #sgy-notes-menu-wrapper,
+#sgy-note-editor-wrapper, #sgy-note-color, .ReactModal__Content { background-color: var(--background)!important; }
+
+#header header, .Header-header-drop-menu-3SaYV, .Search-dropdown-3huUv,
+input[type=submit], #edge-filters-btn, #edge-filters,
+#site-navigation-breadcrumbs ._2T2dA, .submit-buttons .submit-btn,
+.fc-today, nav[aria-label="Breadcrumb"], #breadcrumbs ol li a, ._2T2dA,
+#site-navigation-breadcrumbs a, .nav-breadcrumb-container-1732584003 { background-color: var(--main)!important; }
+
+#header *, #header .Search-dropdown-3huUv li._349XD *,
+#body #header a[role=menuitem], #body #header a[role=menuitem] span,
+#edge-filters-btn, .submit-buttons .submit-btn, .fc-today .fc-day-number,
+#edit-calendar-feed-submit, #site-navigation-footer a, #site-navigation-breadcrumbs a,
+.heading2-root-3118546501, .typography-bodycopy-text-3028800701 { color: var(--text)!important; }
+
+#header article .Card-card-data-17m6S *, #header div[role=menu] *,
+#header ul[role=menu] *, #sgy-settings-section *, .sgy-card *,
+.readonly-title, #event-upcoming, .cancel-btn, .update-body,
+.s-like-sentence, .gradebook-course .title, .link-btn, textarea,
+.s-page-content-full, .info-text table p, .comment-body-wrapper,
+.action-links-unfold-text, .s-rte table p, .fc-day-number,
+.message-body, .portfolio-card__title-link, .portfolio-title-bar, .btn,
+.profile-header, .s-notifications-mini .edge-sentence,
+.notif-date-header, #notif-filter-page-menu li a, .ui-selectmenu-status,
+#edit-departments, .h3-med, .date-header h4, .terms-msg,
+input[type=text], #edit-user-timezone, form[action="/settings"] *,
+.user-link-header h3, .ui-selectmenu-menu *, .info-tab *,
+.assessment-delivery-landing-app ._1wP6w, .lrn, .score-grade-score span,
+.question-view *, .page-title.sDiscussion-processed,
+.course-discussion .discussion-prompt, .dropdown-toggle-text,
+.post-count, .comment-body-wrapper p, .popups-tab, #error-page,
+.heading1-root-929924197, .content-box-container-3232021855,
+.heading2-root-3118546501, .typography-bodycopy-text-3028800701,
+.lrn_btn_drag { color: var(--background_contrast)!important; }
+
+.StandardHeader-header-button-active-state-V0d6c:hover:not(:active),
+.Search-dropdown-3huUv li._349XD:hover, .link-btn.active, .link-btn:hover,
+.fc-today:hover, .util-hover-background-color-cloud-grey-wHghL:hover { background-color: var(--hover)!important; }
+
+.sExtlink-processed, #header div[role=menu] a, #header ul[role=menu] a,
+.s-page-content-full a, .course-event a, .profile-link, .course-link,
+#sgy-course-reorder, .sgy-quick-access-link, .enrollment-view-nav .next:not(.disabled),
+.enrollment-view-nav .prev:not(.disabled), .notifications-header .reset-default,
+a[href="/settings/account?sgy-ext"], .sgy-course-reorder { color: var(--link)!important; }
+
+.Header-header-drop-menu-3SaYV, .util-box-shadow-dropdown-2Bl9b, #main-content-wrapper, #center-top,
+.link-wrapper .active, .submit-span-wrapper, .link-btn, .link-btn.active,
+.app-link-wrapper a.active, .course-materials-left-menu, .content-top-upper,
+.materials-top, .folder-contents-cell, #event-selector,
+.info-text table *, .enrollment-view-wrapper *,
+.Search-dropdown-3huUv ._1ui-c._349XD, .s-rte table *, .submit-btn,
+.fc-widget-content, .fcalendar-filter-menu-wrapper li .menuopt-wrapper,
+.color-codes-box { border-color: var(--border)!important; }
+
+.sgy-card, .uQOmx._2UdSL._2awxe._1EwGW._2v5vf.Ivlky,
+#sgy-profile-wrapper, #sgy-ext-wrapper, .overdue-submissions-wrapper,
+.upcoming-events-wrapper { box-shadow: 0 1px 3px 0 var(--box_shadow)!important; }
+
+input[type=date], input[type=number], input[type=text],
+.cellphone-container { border: 1px solid var(--border)!important; }
+
+/* Assorted stuff */
+
+#course-events, #group-events, #school-events { padding: 15px; }
+
+.action-links-unfold-icon {
+    clip: rect(600px, 50px, 610px, 0px)!important;
+    top: -592px!important;
+}
+
+#body .course-dashboard__administrators { color: white!important; }
+
+.date-header h4 { border-color: #dddddd!important; }
+
+.lrn_incorrect { background-color: rgba(200,0,0,0.5)!important; }
+
+.lrn_correct { background-color: rgba(0,200,0,0.5)!important; }
+
+.lrn_valid, .lrn_selected { background-color: rgba(200,200,0,0.5)!important; }
+
+.question-view .selected * { color: black!important; }
+
+.discussion-action-bar, .popups-tab.active { background: rgba(100,100,100,0.4)!important; }
+
+.discussion-content { background: rgba(100,100,100,0.2)!important; }
+
+.link-btn.active, .link-btn:hover { background: rgba(100,100,100,0.4)!important; }
+
+#toolbar-folder-up a { background-position-y: -298px!important; }
+
+.typography-button-primary-dark-button-3878422715 { background-color: #FFFFFF!important; }
+
+.typography-button-secondary-dark-button-2438965213 { background-color: #D4F3FF!important; }
+
+/* ====================================== */
+/*            Advanced Theme              */
+/* ====================================== */

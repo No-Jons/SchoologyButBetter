@@ -1,0 +1,66 @@
+{
+  "name" : "Schoology But Better",
+  "version" : "0.1",
+  "manifest_version" : 2,
+  "description" : "An extension for the betterment of schoology's... So-So UI.",
+  "icons" : {
+    "48" : "img/schoology.png"
+  },
+  "browser_action" : {
+    "name" : "Schoology But Better",
+    "default_icon" : "img/schoology.png"
+  },
+  "permissions" : [
+    "<all_urls>",
+    "notifications",
+    "storage",
+    "tabs"
+  ],
+  "background" : {
+    "scripts" : ["js/background.js"],
+    "persistent" : false
+  },
+  "content_scripts" : [
+    {
+      "css": ["css/all-pages.css"],
+      "js" : ["lib/js/jquery.min.js", "js/load_user_data.js", "js/css.js", "js/logger.js", "lib/js/confetti.js"],
+      "matches" : ["*://*.schoology.com/*"],
+      "run_at" : "document_start"
+    },
+    {
+      "css" : ["css/tooltip.css", "css/notes.css"],
+      "js" : ["js/all-pages.js", "js/api.js", "js/calendar.js", "js/notes.js"],
+      "matches" : ["*://*.schoology.com/*"],
+      "run_at" : "document_end"
+    },
+    {
+      "css" : ["css/main-page.css"],
+      "js" : ["js/main-page.js"],
+      "matches" : ["*://*.schoology.com/home/*"],
+      "run_at" : "document_end"
+    },
+    {
+      "css" : ["css/settings-page.css"],
+      "js" : ["js/settings-page.js"],
+      "matches" : ["*://*.schoology.com/settings/account?sgy-ext"],
+      "run_at" : "document_end"
+    },
+    {
+      "js" : ["js/settings-page-setup.js"],
+      "matches" : ["*://*.schoology.com/settings/*"],
+      "run_at" : "document_end"
+    },
+    {
+      "css" : ["css/course.css"],
+      "js" : ["js/course.js"],
+      "matches" : ["*://*.schoology.com/course/*/materials*"],
+      "run_at" : "document_end"
+    },
+    {
+      "css": ["css/google-drive.css"],
+      "js": ["js/google-drive-assignments.js"],
+      "matches": ["*://*.schoology.com/assignments/*/info", "*://*.schoology.com/assignments/*/mydocument"],
+      "run_at": "document_end"
+    }
+  ]
+}

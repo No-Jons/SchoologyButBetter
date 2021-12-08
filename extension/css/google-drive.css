@@ -1,0 +1,24 @@
+.edit-document-btn {
+    font-family: muli;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 50px;
+    min-width: 220px;
+    max-width: 280px;
+    outline: none;
+    padding: 0 30px;
+    background-color: #D4F3FF;
+    border-color: #024F7D;
+    color: #0677BA;
+}
+
+.edit-document-btn:hover {
+    border-width: 2px;
+    border-color: #43C5F9;
+    color: #024F7D;
+    padding: 0 29px;
+}

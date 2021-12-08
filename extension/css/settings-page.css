@@ -1,0 +1,75 @@
+#sgy-settings-wrapper {
+    position: absolute;
+    background-color: white;
+    margin: 5%;
+    width: 90%;
+    height: 95%;
+    top: 0;
+}
+
+#sgy-settings-header {
+    background-color: var(--main);
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--text);
+    padding: 20px 0 20px 30px;
+}
+
+#sgy-settings-inner {
+    position: relative;
+    padding-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5);
+}
+
+#sgy-settings-forms {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#sgy-settings-section {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.sgy-settings-section-header {
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #555;
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 0 0;
+    margin: 0 0 20px 10px;
+}
+
+#sgy-settings-inner form { margin-left: 10px; }
+
+#sgy-settings-setting { margin: 0 0 20px; }
+
+#sgy-settings-label { font-size: 14px; }
+
+#sgy-settings-description {
+    display: block;
+    margin-top: 5px;
+}
+
+#sgy-settings-wrapper .submit-span-wrapper {
+    position: absolute;
+    height: fit-content;
+    bottom: 10px;
+}
+
+.theme-external-page {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 1px;
+    width: fit-content;
+    left: 9px;
+}
+
+.theme-external-page:hover {
+    border-bottom: 1px solid var(--link);
+    cursor: pointer;
+    padding-bottom: 0;
+}

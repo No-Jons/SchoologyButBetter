@@ -1,0 +1,192 @@
+#sgy-ext-wrapper {
+    height: auto;
+}
+
+#sgy-profile-image {
+    position: relative;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 8px;
+}
+
+#sgy-profile-name {
+    position: relative;
+    font-size: 18px;
+    top: -6px;
+}
+
+#sgy-profile-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    float: right;
+    margin-top: 5px;
+    height: 60px;
+}
+
+.profile-link { margin-bottom: 10px; }
+
+.section-course-wrapper { margin-top: 5px; }
+
+/* -75px, -50px; */
+
+#sgy-remove-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -1425px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    top: 138px;
+    right: 60px;
+}
+
+#sgy-person-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -75px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    top: 109px;
+    right: 135px;
+}
+
+#sgy-settings-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -475px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    top: 136px;
+    right: 135px;
+}
+
+#sgy-school-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -575px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    top: 109px;
+    right: 60px;
+}
+
+#sgy-updates-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -1025px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    right: 65px;
+}
+
+#sgy-grade-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -125px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    right: 40px;
+}
+
+#sgy-mastery-icon {
+    position: absolute;
+    background-image: url("https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/images/icons_sprite_med.png?5fdbbe5031263e78");
+    background-position: 5px -1325px;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+    right: 15px;
+}
+
+.profile-link:hover #sgy-remove-icon { background-position: 5px -1400px; }
+.profile-link:hover #sgy-person-icon { background-position: 5px -50px; }
+.profile-link:hover #sgy-settings-icon { background-position: 5px -450px; }
+.profile-link:hover #sgy-school-icon { background-position: 5px -550px; }
+#course-shortcut:hover #sgy-updates-icon { background-position: 5px -1000px; }
+#course-shortcut:hover #sgy-grade-icon { background-position: 5px -100px; }
+#course-shortcut:hover #sgy-mastery-icon { background-position: 5px -1300px; }
+
+#to-do-list { margin-top: 10px; }
+
+#empty-to-do-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    top: 6px;
+}
+
+#overdue-submissions::-webkit-scrollbar, .upcoming-events::-webkit-scrollbar, #to-do-list::-webkit-scrollbar { display: none; }
+
+.upcoming-events a[href="/user-calendar"] { display: none; }
+
+.course-event.complete a, .course-event.complete .upcoming-time { text-decoration: line-through; }
+.course-event.priority { background: linear-gradient(to top, rgba(255,0,0,0.15), rgba(255,0,0,0)); }
+
+.course-event.priority a {
+    color: #FF4500!important;
+    font-weight: bold;
+}
+
+.sgy-assignment-complete-toggle {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+
+.sgy-add-to-todo {
+    position: absolute;
+    background-image: url("https://img.icons8.com/fluent-systems-regular/25/clipboard-list--v1.png");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    top: 6px;
+    right: 10px;
+}
+
+.sgy-remove-from-todo {
+    position: absolute;
+    background-image: url("https://img.icons8.com/fluent-systems-regular/25/clipboard-approve--v3.png");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    top: 6px;
+    right: 35px;
+}
+
+.sgy-mark-priority-toggle {
+    position: absolute;
+    background-image: url("https://img.icons8.com/material-outlined/23/important-time.png");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    top: 6px;
+    right: 8px;
+}
+
+#sgy-quick-access-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sgy-quick-access-link {
+    position: relative;
+    font-size: 15px;
+    margin: 10px 15px 0 0;
+}
+
+.sgy-course-reorder {
+    position: relative;
+    float: right;
+}
+
+.tipsy.tipsy-e[role="tooltip"] { display: none!important; }

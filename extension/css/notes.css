@@ -1,0 +1,81 @@
+#sgy-note-editor-wrapper { padding: 15px; }
+
+.sgy-note-menu-item { position: relative; }
+
+#body .sgy-note-menu-content {
+    position: relative;
+    width: 75%;
+    height: fit-content;
+    min-height: 75px;
+    color: black!important;
+    font: 12px "Sgy Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+    font-weight: bold;
+    padding: 8px 0 0 8px;
+}
+
+.sgy-note-menu-controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid white;
+    width: 23%;
+    height: 84%;
+    right: 0;
+    top: 15%;
+    z-index: 10;
+}
+
+#sgy-note-editor-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#sgy-note-editor-buttons { padding-top: 15px; }
+
+#sgy-notes-display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 998;
+}
+
+#sgy-notes-display * { pointer-events: all; }
+
+.sgy-note-display {
+    position: absolute;
+    width: 110px;
+    height: fit-content;
+    padding-bottom: 15px;
+}
+
+.sgy-note-display-top {
+    width: 100%;
+    height: 15px;
+    background-color: rgba(0,0,0,0.1);
+    margin-bottom: 5px;
+}
+
+.sgy-note-display-top:hover { cursor: grab; }
+
+.sgy-note-display-content {
+    color: black!important;
+    padding: 0 5px 5px 5px;
+}
+
+.sgy-remove-note {
+    position: absolute;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    right: 5px;
+    bottom: 1.5px;
+}
+
+.sgy-remove-note:hover { cursor: pointer; }

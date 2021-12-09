@@ -1,0 +1,58 @@
+body { background-color: var(--background); }
+
+#focus-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.focus-info { box-shadow: 0 1px 3px 0 var(--box_shadow); }
+
+.focus-text { padding: 15px; }
+
+.focus-heaver-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main);
+    color: var(--text);
+    font-family: Muli,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.focus-blurb {
+    color: var(--background_contrast);
+    font-family: Muli,sans-serif;
+    font-size: 15px;
+}
+
+.focus-embedded-domain {
+    color: var(--link)!important;
+    font-family: Muli,sans-serif;
+    font-weight: bold;
+}
+
+.focus-whitelist-wrapper { margin-top: 20px; }
+
+.focus-action-btns-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.focus-action-btn {
+    padding: 5px 3px;
+    border: 1px solid var(--text);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.focus-whitelist {
+    margin-right: 15px;
+    background-color: var(--main);
+    color: var(--text);
+}
+
+.focus-cancel {
+    background-color: var(--background);
+    color: var(--link);
+}

@@ -11,4 +11,4 @@ function logCSS(h, s, l){
     return `color:${color};border:1px solid ${color};background-color:hsl(${h},${s}%,${Math.round((l/2)*3)}%);`
 }
 
-Logger.debug("Initialized SchoologyButBetter Logger.")
+Logger.debug("Initialized SchoologyButBetter Logger.");

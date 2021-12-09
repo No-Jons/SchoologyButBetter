@@ -72,7 +72,7 @@
 })();
 
 $(document.body).on("click", ".theme-external-page", function(){
-    chrome.runtime.sendMessage({"event": "tab", "page": "/theme.html"});
+    chrome.runtime.sendMessage({"event": "tab", "page": "/html/theme.html"});
 })
 
 $(document.body).on("click", "#sgy-settings-submit", function() {

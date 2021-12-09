@@ -3,6 +3,13 @@
  storage.get(["userConfig"], function(result) {
      if (result.userConfig) {
          config = result.userConfig;
+         if (true){//config.focus === undefined){
+             config.focus = {
+                 enabled: false,
+                 strict: false,
+                 whitelist: [window.location.hostname]
+             }
+         }
          Logger.debug(config)
      } else {
          config = {
@@ -42,7 +49,7 @@
              focus: {
                  enabled: false,
                  strict: false,
-                 whitelist: []
+                 whitelist: [window.location.hostname]
              },
              key: undefined,
              secret: undefined

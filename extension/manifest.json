@@ -15,6 +15,7 @@
     "notifications",
     "storage",
     "background",
+    "webNavigation",
     "tabs"
   ],
   "background" : {
@@ -23,7 +24,7 @@
   },
   "content_scripts" : [
     {
-      "js": ["js/logger.js", "js/focus.js"],
+      "js": ["js/logger.js"],
       "matches": ["<all_urls>"],
       "run_at": "document_start"
     },

@@ -41,9 +41,9 @@ Sample Search:
 #### Assignments, Assessments (quizzes/tests), ..., links:
 Filters out all items not matching the checked item type.
 #### Search Query:
-Pretty self-explanatory
-Case-sensitive checkbox enables case sensitivity.
-Regex checkbox converts the input to a [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression).
+Pretty self-explanatory.
+<br/>Case-sensitive checkbox enables case sensitivity.
+<br/>Regex checkbox converts the input to a [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression).
 #### After Date/Before Date:
 If checked, returns only assignments after and/or before the submitted dates.
 #### Search for Late or Incomplete Assignments:

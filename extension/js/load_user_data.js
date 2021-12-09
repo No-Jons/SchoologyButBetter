@@ -39,6 +39,11 @@
                  }
              },
              notes: [],
+             focus: {
+                 enabled: false,
+                 strict: false,
+                 whitelist: []
+             },
              key: undefined,
              secret: undefined
          };

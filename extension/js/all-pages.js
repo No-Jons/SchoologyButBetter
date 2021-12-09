@@ -1,5 +1,4 @@
 let userID = getUserID();
-let schoolID;
 
 function getUserID() { return Number.parseInt(new URLSearchParams(document.querySelector("iframe[src*=session-tracker]").src.split("?")[1]).get("id")); }
 

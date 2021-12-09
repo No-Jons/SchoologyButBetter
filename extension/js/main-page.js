@@ -1,23 +1,23 @@
 (async function(){
-    let userSections = await fetchApiData(`/users/${userID}/sections`);
-    schoolID = userSections.section[0].school_id;
+    courseQuicklinks(await fetchApiData(`/users/${userID}/sections`));
+    profileQuicklinks();
+    setupToDoList();
+    setupAssignmentActions()
+    markCompletedAssignments();
+})();
 
-    if ($(".overdue-submissions-wrapper .course-event").length === 0)
-        $(".overdue-submissions-wrapper").remove();
-
-    //Course section setup
-    (function() {
-        document.getElementById("right-column-inner").insertAdjacentHTML("afterbegin", "<div id=\"sgy-ext-wrapper\"><div id=\"quick-access-courses\" class=\"courses-menu-icon\"></div></div>");
-        let quickAccess = document.getElementById("quick-access-courses");
-        quickAccess.insertAdjacentHTML("beforeend", "<h3 class=\"h3-med\">Courses<a class=\"sgy-course-reorder\" href=\"/courses?reorder\">Reorder</a></h3>");
-        let section;
-        for (let i = 0; i < userSections.section.length; i++) {
-            section = userSections["section"][i];
-            quickAccess.insertAdjacentHTML("beforeend", `<div id="${section['id']}-wrapper" class="section-course-wrapper"><a id=\"${section['id']}\" class="course-link" href="/course/${section['id']}">${section.course_title}</a></div>`)
-            document.getElementById(`${section['id']}-wrapper`).insertAdjacentHTML("beforeend", `<a id="course-shortcut" href="/course/${section['id']}/updates"><span id="sgy-updates-icon"></span></a><a id="course-shortcut" href="/course/${section['id']}/student_grades"><span id="sgy-grade-icon"></span></a><a id="course-shortcut" href="/course/${section['id']}/student_mastery"><span id="sgy-mastery-icon"></span></a>`)
-        }
-        quickAccess.insertAdjacentHTML("beforeend",
-            `<h3 class="h3-med" style=\"margin-top: 10px;\">Quick Access</h3>
+function courseQuicklinks(userSections) {
+    document.getElementById("right-column-inner").insertAdjacentHTML("afterbegin", "<div id=\"sgy-ext-wrapper\"><div id=\"quick-access-courses\" class=\"courses-menu-icon\"></div></div>");
+    let quickAccess = document.getElementById("quick-access-courses");
+    quickAccess.insertAdjacentHTML("beforeend", "<h3 class=\"h3-med\">Courses<a class=\"sgy-course-reorder\" href=\"/courses?reorder\">Reorder</a></h3>");
+    let section;
+    for (let i = 0; i < userSections.section.length; i++) {
+        section = userSections["section"][i];
+        quickAccess.insertAdjacentHTML("beforeend", `<div id="${section['id']}-wrapper" class="section-course-wrapper"><a id=\"${section['id']}\" class="course-link" href="/course/${section['id']}">${section.course_title}</a></div>`)
+        document.getElementById(`${section['id']}-wrapper`).insertAdjacentHTML("beforeend", `<a id="course-shortcut" href="/course/${section['id']}/updates"><span id="sgy-updates-icon"></span></a><a id="course-shortcut" href="/course/${section['id']}/student_grades"><span id="sgy-grade-icon"></span></a><a id="course-shortcut" href="/course/${section['id']}/student_mastery"><span id="sgy-mastery-icon"></span></a>`)
+    }
+    quickAccess.insertAdjacentHTML("beforeend",
+        `<h3 class="h3-med" style=\"margin-top: 10px;\">Quick Access</h3>
                   <div id="sgy-quick-access-container">
                     <a class="sgy-quick-access-link" href="/user/${userID}/info">Profile</a>
                     <a class="sgy-quick-access-link" href="/courses">Courses</a>
@@ -26,24 +26,23 @@
                     <a class="sgy-quick-access-link" href="/resources">Resources</a>
                     <a class="sgy-quick-access-link" href="/groups">Groups</a>
                   </div>`
-            )
-        quickAccess.insertAdjacentHTML("afterend", "<div id=\"to-do-list\"><span id=\"empty-to-do-list\">No items in list... yet!</span></div>");
-        let toDoList = document.getElementById("to-do-list");
-        toDoList.insertAdjacentHTML("afterbegin", "<h3 class=\"h3-med\" style=\"margin-top: 10px;\">To-Do List</h3>");
-    })();
+    )
+    quickAccess.insertAdjacentHTML("afterend", "<div id=\"to-do-list\"><span id=\"empty-to-do-list\">No items in list... yet!</span></div>");
+    let toDoList = document.getElementById("to-do-list");
+    toDoList.insertAdjacentHTML("afterbegin", "<h3 class=\"h3-med\" style=\"margin-top: 10px;\">To-Do List</h3>");
+}
 
-    //Profile interaction setup
-    (function() {
-        let profile = $("._1tpub ._2Id_D img.USYsM");
-        let profileImage = profile.attr("src");
-        let studentName = profile.attr("alt");
-        let userInfoDrop = $(`div[data-sgy-sitenav="header-my-account-menu"] button`);
-        userInfoDrop.click();
-        let schoolLink = $(`li a[href^="/school"]`).attr("href");
-        let logoutLink = $(`li a[href^="/logout?ltoken"]`).attr("href");
-        userInfoDrop.click();
-        $("#right-column-inner").prepend(
-            `<div id="sgy-profile-wrapper">
+function profileQuicklinks() {
+    let profile = $("._1tpub ._2Id_D img.USYsM");
+    let profileImage = profile.attr("src");
+    let studentName = profile.attr("alt");
+    let userInfoDrop = $(`div[data-sgy-sitenav="header-my-account-menu"] button`);
+    userInfoDrop.click();
+    let schoolLink = $(`li a[href^="/school"]`).attr("href");
+    let logoutLink = $(`li a[href^="/logout?ltoken"]`).attr("href");
+    userInfoDrop.click();
+    $("#right-column-inner").prepend(
+        `<div id="sgy-profile-wrapper">
                 <div id="sgy-profile">
                     <h3 class="h3-med">${studentName}</h3>
                     <img src="${profileImage}" alt="${studentName}" id="sgy-profile-image">
@@ -55,62 +54,59 @@
                     </div>
                 </div>
              </div>`
+    );
+}
+
+function setupToDoList() {
+    let assignmentID;
+    Logger.log("Setting up to-do list");
+    for (let i = 0; i < config.todolist.length; i++){
+        assignmentID = config.todolist[i];
+        Logger.debug(`Adding assignment ${assignmentID} to to-do list`);
+        reAddItemToToDoList(assignmentID);
+    }
+    Logger.log("Marking assignment priorities");
+    for (let i = 0; i < config.priorities.length; i++){
+        assignmentID = config.priorities[i];
+        Logger.debug(`Marking assignment ${assignmentID} as a priority`);
+        $(`#to-do-list-item.${assignmentID}-to-do`).addClass("priority");
+        let button = $(`.sgy-mark-priority-toggle[data-id="${assignmentID}"]`);
+        button.attr("data-action", "unprioritize");
+    }
+}
+
+function setupAssignmentActions() {
+    let assignments = getAssignments(true);
+    let assignment;
+    Logger.log("Adding action buttons to valid assignments");
+    for (let i = 0; i < assignments.length; i++){
+        assignment = assignments[i];
+        let assignmentElement = $(`div[data-start] a[href$="${assignment}"]`);
+        assignmentElement.parent().append(
+            `<div id="sgy-action" class="sgy-assignment-complete-toggle green-check" data-id="${assignment}" data-action="markcomplete"></div><div id="sgy-action" class="sgy-add-to-todo" data-id="${assignment}" data-action="addtolist"></div>`
         );
-    })();
+    }
+}
 
-    //Read some values from chrome storage and edit accordingly
-    (function() {
-        let assignmentID;
-        Logger.log("Setting up to-do list");
-        for (let i = 0; i < config.todolist.length; i++){
-            assignmentID = config.todolist[i];
-            Logger.debug(`Adding assignment ${assignmentID} to to-do list`);
-            reAddItemToToDoList(assignmentID);
+function markCompletedAssignments(){
+    let assignments = getAssignments(true);
+    let assignment;
+    let submissions = [];
+    let submitted;
+    Logger.log("Marking completed assignments as complete");
+    for (let i = 0; i < assignments.length; i++) {
+        assignment = assignments[i];
+        submitted = config.completed.includes(assignment.toString());
+        submissions.push({submission: submitted, assignment: assignment});
+    }
+    let submission;
+    for (let i = 0; i < submissions.length; i++) {
+        submission = submissions[i];
+        if (submission.submission) {
+            toggleAssignmentComplete(submission.assignment, submission.submission, false);
         }
-        Logger.log("Marking assignment priorities");
-        for (let i = 0; i < config.priorities.length; i++){
-            assignmentID = config.priorities[i];
-            Logger.debug(`Marking assignment ${assignmentID} as a priority`);
-            $(`#to-do-list-item.${assignmentID}-to-do`).addClass("priority");
-            let button = $(`.sgy-mark-priority-toggle[data-id="${assignmentID}"]`);
-            button.attr("data-action", "unprioritize");
-        }
-    })();
-
-    //Append options to assignments
-    (function() {
-        let assignments = getAssignments(true);
-        let assignment;
-        Logger.log("Adding action buttons to valid assignments");
-        for (let i = 0; i < assignments.length; i++){
-            assignment = assignments[i];
-            let assignmentElement = $(`div[data-start] a[href$="${assignment}"]`);
-            assignmentElement.parent().append(
-                `<div id="sgy-action" class="sgy-assignment-complete-toggle green-check" data-id="${assignment}" data-action="markcomplete"></div><div id="sgy-action" class="sgy-add-to-todo" data-id="${assignment}" data-action="addtolist"></div>`
-            );
-        }
-    })();
-
-    await (async function(){
-        let assignments = getAssignments(true);
-        let assignment;
-        let submissions = [];
-        let submitted;
-        Logger.log("Marking completed assignments as complete");
-        for (let i = 0; i < assignments.length; i++) {
-            assignment = assignments[i];
-            submitted = config.completed.includes(assignment.toString());
-            submissions.push({submission: submitted, assignment: assignment});
-        }
-        let submission;
-        for (let i = 0; i < submissions.length; i++) {
-            submission = submissions[i];
-            if (submission.submission) {
-                toggleAssignmentComplete(submission.assignment, submission.submission, false);
-            }
-        }
-    })();
-})();
+    }
+}
 
 function getAssignments(overdue){
     Logger.log("Fetching assignments");

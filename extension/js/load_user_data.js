@@ -3,7 +3,7 @@
  storage.get(["userConfig"], function(result) {
      if (result.userConfig) {
          config = result.userConfig;
-         if (true){//config.focus === undefined){
+         if (config.focus === undefined){
              config.focus = {
                  enabled: false,
                  strict: false,
@@ -12,6 +12,7 @@
          }
          Logger.debug(config)
      } else {
+         // todo: move this to chrome.runtime.onInstall
          config = {
              todolist: [],
              priorities: [],
@@ -58,4 +59,7 @@
      }
  });
 
- function saveUserConfig() { storage.set({"userConfig": config}); }
+ function saveUserConfig() {
+     storage.set({"userConfig": config});
+     Logger.debug("Saved user config");
+ }

@@ -69,16 +69,7 @@ chrome.webNavigation.onCompleted.addListener(function(details){
     if (details.frameId === 0) {
         chrome.tabs.get(details.tabId, function (tab) {
             if (tab.url === details.url) {
-                chrome.storage.sync.get(["userConfig"], function(r){
-                    if (!r.userConfig.focus.enabled) { return; }
-                    if (!tab.url.match(/chrome:\/\/.+/)){
-                        let domain = tab.url.match(/[a-z]+:\/\/((.+\.)?.+\.[a-z]+)/)[1];
-                        if (!r.userConfig.focus.whitelist.includes(domain)){
-                            Logger.log(`Redirecting from domain ${domain}`);
-                            chrome.tabs.update(tab.id, {url: `/html/focus-mode.html?url=${encodeURI(tab.url)}`});
-                        }
-                    }
-                });
+                checkValidUrl(tab);
             }
         });
     }
@@ -86,15 +77,20 @@ chrome.webNavigation.onCompleted.addListener(function(details){
 
 chrome.tabs.onActivated.addListener(function(details){
     chrome.tabs.get(details.tabId, function (tab) {
-        chrome.storage.sync.get(["userConfig"], function(r){
-            if (!r.userConfig.focus.enabled){ return; }
-            if (!tab.url.match(/chrome:\/\/.+/)){
-                let domain = tab.url.match(/[a-z]+:\/\/((.+\.)?.+\.[a-z]+)/)[1];
-                if (!r.userConfig.focus.whitelist.includes(domain)){
-                    Logger.log(`Redirecting from domain ${domain}`);
-                    chrome.tabs.update(tab.id, {url: `/html/focus-mode.html?url=${encodeURI(tab.url)}`});
-                }
-            }
-        });
+        checkValidUrl(tab);
     });
 });
+
+function checkValidUrl(tab){
+    chrome.storage.sync.get(["userConfig"], function(r){
+        if (!r.userConfig.focus.enabled) { return; }
+        if (!tab.url.match(/chrome:\/\/.+/)){
+            let domain = tab.url.match(/[a-z]+:\/\/((.+\.)?.+\.[a-z]+)/)[1];
+            // todo: check domains w/out subdomains as well
+            if (!r.userConfig.focus.whitelist.includes(domain)){
+                Logger.log(`Redirecting from domain ${domain}`);
+                chrome.tabs.update(tab.id, {url: `/html/focus-mode.html?url=${encodeURI(tab.url)}`});
+            }
+        }
+    });
+}

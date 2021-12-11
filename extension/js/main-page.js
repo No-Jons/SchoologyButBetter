@@ -1,3 +1,6 @@
+// todo: announcements feature in "recent activity" tab
+// todo: popup notifications for updates
+
 (async function(){
     courseQuicklinks(await fetchApiData(`/users/${userID}/sections`));
     profileQuicklinks();

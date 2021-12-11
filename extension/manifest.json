@@ -1,6 +1,6 @@
 {
   "name" : "Schoology But Better",
-  "version" : "0.1.2",
+  "version" : "0.2.2",
   "manifest_version" : 2,
   "description" : "An extension for the betterment of schoology's... So-So UI.",
   "icons" : {
@@ -36,7 +36,7 @@
     },
     {
       "css" : ["css/tooltip.css", "css/notes.css"],
-      "js" : ["js/all-pages.js", "js/calendar.js", "js/notes.js"],
+      "js" : ["js/all-pages.js", "js/calendar.js", "js/notes.js", "js/focus_mode_toggle.js"],
       "matches" : ["*://*.schoology.com/*"],
       "run_at" : "document_end"
     },
@@ -65,7 +65,7 @@
     },
     {
       "css": ["css/google-drive.css"],
-      "js": ["js/google-drive-assignments.js"],
+      "js": ["js/google_drive_assignments.js"],
       "matches": ["*://*.schoology.com/assignments/*/info", "*://*.schoology.com/assignments/*/mydocument"],
       "run_at": "document_end"
     }

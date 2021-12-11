@@ -73,3 +73,30 @@
     cursor: pointer;
     padding-bottom: 0;
 }
+
+.sgy-whitelisted-domains-header {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sgy-whitelisted-domains {
+    margin: 10px -14px 0 0;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar-corner { background: var(--background)!important; }
+
+.sgy-domain-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sgy-blacklist-domain {
+    padding: 0 3px;
+    background-color: var(--main);
+    color: var(--text);
+    font-weight: bold;
+    border: 1px solid var(--text);
+    border-radius: 0;
+}

@@ -104,6 +104,6 @@ $(document.body).on("click", ".sgy-blacklist-domain", function(){
     let idx = config.focus.whitelist.indexOf($(this).attr("data-domain"));
     config.focus.whitelist.splice(idx, 1);
     saveUserConfig();
-    Logger.debug(config.focus.whitelist);
-    $(`.sgy-domain-wrapper[data-domain=${$(this).attr("data-domain")}]`).remove();
+    Logger.debug(`Removed domain ${$(this).attr("data-domain")} from whitelist`);
+    $(`.sgy-domain-wrapper[data-domain="${$(this).attr("data-domain")}"]`).remove();
 });
